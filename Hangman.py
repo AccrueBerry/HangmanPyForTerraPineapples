@@ -96,7 +96,7 @@ answerGuessedA = False
 wrongA=False
 def playrounds():
     score=0
-    while score<999:
+    while score<99:
         lives=5
         guessedLetters.clear()
         word=words[random.randint(0,len(words)-1)];
