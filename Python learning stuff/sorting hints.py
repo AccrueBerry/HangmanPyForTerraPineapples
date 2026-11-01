@@ -99,7 +99,7 @@ words = ["ghost",
         "pk fire!",
         "we love hackclub!",
         "get to ninety nine score!",
-        "special thanks to \@truecrossing.214!"
+        "special thanks to @truecrossing.214!"
         ,"hope you enjoyed",
         "copilots gonna take my seoul",
         "connection purple section",
@@ -139,5 +139,6 @@ words = ["ghost",
         ,"\"nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,\"",
         "\"i can see why you love that thing, but you're no windman!\"",
         "w chews",
-        "p.s. if inputs do not seem to work, know that i made this in visual studio Code.\\n if it is being run in visual studio code, run it in the terminal by running the python file. \\n otherwise, it will be run in the output and it will not take inputs from the user.\\n\\nsince the time is about halloween right now, it will be somewhat halloween themed, think common costumes, media, and general halloween stuff.\nit won't be all halloween, so expect other words, boatloads of media references, famous figures, and many, many long quotes!"];
+        "p.s. if inputs do not seem to work, know that i made this in visual studio Code.\\n if it is being run in visual studio code, run it in the terminal by running the python file. \\n otherwise, it will be run in the output and it will not take inputs from the user.\\n\\nsince the time is about halloween right now, it will be somewhat halloween themed, think common costumes, media, and general halloween stuff.\nit won't be all halloween, so expect other words, boatloads of media references, famous figures, and many, many long quotes!",
+        "\"this? state? this? hit the road dude this aint no state property this is private property\""];
 #thats a whole lotta answers i gotta go through 
