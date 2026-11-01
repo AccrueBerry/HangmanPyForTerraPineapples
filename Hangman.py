@@ -17,11 +17,18 @@ print("\n\nGuess the letters until you get the word or type the word outright to
 
 #make the guy
 def makeGuy(stage):
-    print("\n\n_____________");
+    print("\n\nlives = "+str(lives)+"\n"+"score = "+str(score))
+    print("\n_____________");
     print("|       |");
     if stage == 4:
         for i in range(5):
             print("|");
+    elif stage == -1:
+        print("|")
+        print("|")
+        print("|     \\O/")
+        print("|       |")
+        print("|      /\\")
     elif stage == 3:
         print("|       O")
         for i in range(4):
@@ -70,21 +77,33 @@ def placeholder():
 word=words[random.randint(0,87)];
 lives=4
 score=0
-
+makeGuy(0)
 print(placeholder())
-while lives>0:
-    pass
-    #choose word and make some other variables
-    word=words[random.randint(1,88)];
+def playrounds():
+    while lives>0:
+        #choose word and make some other variables
+        word=words[random.randint(1,87)];
     
     
     #make the guy to set up
-    makeGuy(4)
+        makeGuy(lives)
+        print(placeholder())
 
-
-    print("")
-    print("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:")
-
+        print("")
+        answer = input("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:")
+        if answer>1:
+            if answer == word:
+                score+=1
+                print("\nYou saved hangman!")
+            else:
+                lives-=1
+                if lives == 0:
+                    makeGuy(0)
+                    print("hangman is no more, how could you! >:((\nRewinding...")
+                else:
+                    print("\nThat was the wrong word, try again!")
+    playrounds()
+    
 
 
 
