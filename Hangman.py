@@ -73,25 +73,31 @@ def placeholder():
                 placeholderp+=i
                 placeholderp+=" "
     return placeholderp
+
 #choose word and make some other variables
 word=words[random.randint(0,87)];
 lives=4
 score=0
-makeGuy(0)
-print(placeholder())
+answerGuessedA = False
+wrongA=False
 def playrounds():
+    lives=4
+    score=0
+    word=words[random.randint(0,87)];
     while lives>0:
         #choose word and make some other variables
-        word=words[random.randint(1,87)];
-    
-    
-    #make the guy to set up
+        answerGuessedA=False
+        #make the guy to set up
         makeGuy(lives)
         print(placeholder())
-
+        print("\nguessed already:")
+        print(guessedLetters)
         print("")
         answer = input("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:")
-        if answer>1:
+        for i in guessedLetters:
+            if i == answer:
+                answerGuessedA = True
+        if len(answer)>1:
             if answer == word:
                 score+=1
                 print("\nYou saved hangman!")
@@ -99,10 +105,19 @@ def playrounds():
                 lives-=1
                 if lives == 0:
                     makeGuy(0)
-                    print("hangman is no more, how could you! >:((\nRewinding...")
+                    print("\nhangman is no more, how could you! >:((\nRewinding...")
                 else:
                     print("\nThat was the wrong word, try again!")
+        elif answerGuessedA==True:
+            print("\n You've already guessed that silly! Try again with something you haven't guessed yet!")
+        else:
+            for i in word:
+                if i == answer:
+                    guessedLetters.append(answer)
+                    print("\nNice one, guess another, or if you've found all the letters or can make the word, guess it(inclde punctuation and especially quotations)")
+
     playrounds()
+playrounds()
     
 
 
