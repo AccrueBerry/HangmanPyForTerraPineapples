@@ -20,5 +20,5 @@ def fibonacci(p):
 
 #this is where it all went wrong, it just doesnt like me bro
 y = input("how many didgits of fibonacci do u want");
-fibonacci(y);
-#gave up
+fibonacci(int(y));
+#successful
