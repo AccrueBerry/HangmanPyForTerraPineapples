@@ -1,7 +1,7 @@
 #Hangman in ASCII wooooo yipee look at me go!
 #since it is halloween,the word list will be more halloween themed!
 import random;
-words = ["ghost","poop","frankenstein","skeleton","pumpkin","witch","spooky","haloween","cobwebs",
+words = ["ghost","poop","spongebob","patrick the star","gerard way","dihydrogen monoxide","frankenstein","hangman","skeleton","pumpkin","witch","spooky","haloween","cobwebs",
         "werewolf","trick or treat","candy","basket","candle","lantern","monster","costume","toilet","person"
         ,"firefighter","police","cowboy","officer","mask","costume","decoration","spider","skull","zombie","superhero",
         "october","autumn","blood","bones","tombstone","carl sagan","albert einstein","nikola tesla","dracula","friday the thirteenth","black phone","prisoner","knight","video games","rene descartes"
@@ -16,8 +16,11 @@ print("P.S. if inputs do not seem to work, know that I made this in Visual Studi
 print("\n\nGuess the letters until you get the word or type the word outright to win. youhave 4 lives. good luck!")
 
 #make the guy
-def makeGuy(stage):
-    print("\n\nlives = "+str(lives)+"\n"+"score = "+str(score))
+def makeGuy(stage,s):
+    print("\n\n\u2764\uFE0F lives:")
+    print(stage)
+    print("\u2605 score:")
+    print(s)
     print("\n_____________");
     print("|       |");
     if stage == 4:
@@ -27,7 +30,7 @@ def makeGuy(stage):
         print("|")
         print("|")
         print("|     \\O/")
-        print("|       |")
+        print("|      |")
         print("|      /\\")
     elif stage == 3:
         print("|       O")
@@ -52,13 +55,15 @@ def makeGuy(stage):
     print("_____________\n");
 
 #make some nice placeholder stuff, check if a character is a letter if it is its printed as a blank, otherwise it prints and ski[s it]
-def placeholder():
+def placeholder(w):
     placeholderp=""
     isLetter=True
     guessedAlready=False
-    for i in word:
-        isLetter=False
+    for i in w:
+        isLetter=True
+        guessedAlready=False
         for g in guessedLetters:
+            isLetter=True
             if i == g:
                 guessedAlready=True
         if guessedAlready == True:
@@ -70,41 +75,49 @@ def placeholder():
                     placeholderp+="_ "
                     isLetter=True
             if isLetter != True:
-                placeholderp+=i
-                placeholderp+=" "
+                if i==" ":
+                    placeholderp+="   "
+                else:
+                    placeholderp+=i
+                    placeholderp+=" "
     return placeholderp
 
 #choose word and make some other variables
-word=words[random.randint(0,87)];
+word=words[random.randint(0,len(words))];
 lives=4
 score=0
 answerGuessedA = False
 wrongA=False
 def playrounds():
-    lives=4
     score=0
-    word=words[random.randint(0,87)];
+    lives=4
+    guessedLetters.clear()
+    word=words[random.randint(0,len(words)-1)];
     while lives>0:
         #choose word and make some other variables
         answerGuessedA=False
+        wrongA=True
         #make the guy to set up
-        makeGuy(lives)
-        print(placeholder())
-        print("\nguessed already:")
+        makeGuy(lives,score)
+        print(placeholder(word))
+        print("\nletter and words already guessed:")
         print(guessedLetters)
         print("")
-        answer = input("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:")
+        answer = input("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:\n")
         for i in guessedLetters:
             if i == answer:
                 answerGuessedA = True
         if len(answer)>1:
             if answer == word:
                 score+=1
+                makeGuy(-1,score)
                 print("\nYou saved hangman!")
+                playrounds()
             else:
                 lives-=1
                 if lives == 0:
-                    makeGuy(0)
+                    makeGuy(0,score)
+                    score=0
                     print("\nhangman is no more, how could you! >:((\nRewinding...")
                 else:
                     print("\nThat was the wrong word, try again!")
@@ -113,9 +126,19 @@ def playrounds():
         else:
             for i in word:
                 if i == answer:
-                    guessedLetters.append(answer)
-                    print("\nNice one, guess another, or if you've found all the letters or can make the word, guess it(inclde punctuation and especially quotations)")
 
+                    wrongA=False
+                    guessedLetters.append(answer)
+                    print("\nNice one, guess another, or if you've found all the letters or can make the word, guess it(inclde punctuation and especially quotations and ALL LOWERCASE)")
+            if wrongA==True:
+                guessedLetters.append(answer)
+                lives-=1
+                if lives == 0:
+                    makeGuy(0,score)
+                    score=0
+                    print("\nhangman is no more, how could you! >:((\nRewinding...\nThe word was "+word+" by the way")
+                else:
+                    print("\nThat letter is not in the answer, try again!")
     playrounds()
 playrounds()
     
