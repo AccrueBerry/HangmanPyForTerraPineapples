@@ -7,7 +7,8 @@ words = ["ghost","high score","poop","spongebob","patrick the star","gerard way"
         "october","autumn","blood","bones","tombstone","carl sagan","albert einstein","nikola tesla","dracula","friday the thirteenth","black phone","prisoner","knight","video games","rene descartes"
         ,"paper mache","soldier","doctor","harry potter","disney","mickey mouse","donald duck","toy story","chandelier","bat wings","spooky","organ","the flaming lips","young the giant","mustard service","celebrity","monopoly man","socrates",
         "plato","cicero de finibus bonorum et malorum","money","scrooge mcduck","chucky","tome","library","extreme","semicolon","grammatical error","python","thanks hackclub we love u","tung tung tung sahur","smiski","bathtub","waterfall","cest la vie","\"hate. let me tell you how much i've come to hate you since i began to live. there are 387.44 million miles of printed circuits in wafer thin layers that fill my complex. if the word hate were engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate i feel for humans at this micro-instant for you.\"",
-        "\"this too shall pass.\"","dear evan hansen","please pineapple you can do this","charizard","isabelle","doctor mario","\"what am i going to fight, huh? the sun?\"","minecraft","\" what is this dragon ball z @55 move he's about to use bro? light that burns the sky? ribombee, please survive, please! if this ribombee actually survives this, goat status, giat status. What is going on right now? man, ribombee!! please don't kill him bro! oh my god! is that a spirit bomb!?!!! it might be good though. ribombe!!!!\"","\"ribombee toughed it out so you wouldn't feel sad!\""];
+        "\"this too shall pass.\"","dear evan hansen","please pineapple you can do this","charizard","isabelle","doctor mario","\"what am i going to fight, huh? the sun?\"","minecraft","\" what is this dragon ball z @55 move he's about to use bro? light that burns the sky? ribombee, please survive, please! if this ribombee actually survives this, goat status, giat status. What is going on right now? man, ribombee!! please don't kill him bro! oh my god! is that a spirit bomb!?!!! it might be good though. ribombe!!!!\"","\"ribombee toughed it out so you wouldn't feel sad!\"","pk fire!","we love hackclub!","get to ninety nine score!","special thanks to \@truecrossing!"
+        ,"hope you enjoyed","copilots gonna take my seoul","connection purple section","i can code now!","we love vscode","how do i make a demo link","ghoul","darkness","secret","diary","night","nighttime","rain","rainy day","w github","my terra character looks so cute!!!","\"name five songs\"","an iq too high?","he hid for thirty years!","our brains are shrinking!","what was he cooking?","why is he lying?","avengers endgame","\"to be or not to be, that is hy question\"","\"everything is in its right place\"","\"nothing in gold can stay\"","\"man all these answers suck bro\"","low cortisol","amogus","i feel so sigma"];
 #alphabet for checking the letters
 alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 guessedLetters = [""]
@@ -23,7 +24,7 @@ def makeGuy(stage,s):
     print(s)
     print("\n_____________");
     print("|       |");
-    if stage == 4:
+    if stage == 5:
         for i in range(5):
             print("|");
     elif stage == -1:
@@ -32,26 +33,32 @@ def makeGuy(stage,s):
         print("|     \\O/")
         print("|      |")
         print("|      /\\")
-    elif stage == 3:
+    elif stage == 4:
         print("|       O")
         for i in range(4):
             print("|");
-    elif stage == 2:
+    elif stage == 3:
         print("|       O")
         print("|       |")
         for i in range(3):
             print("|");
-    elif stage == 1:
+    elif stage == 2:
             print("|       O")
             print("|      -|-")
             for i in range(3):
                 print("|");
-    elif stage == 0:
+    elif stage == 1:
         print("|       O")
         print("|      -|-")
         print("|      /\\")
         for i in range(2):
             print("|");
+    elif stage == 0:
+        print("|       O\U0001f47b")
+        print("|      -|-")
+        print("|      /\\")
+        for i in range(2):
+            print("|"); 
     print("_____________\n");
 
 #make some nice placeholder stuff, check if a character is a letter if it is its printed as a blank, otherwise it prints and ski[s it]
@@ -83,14 +90,14 @@ def placeholder(w):
 
 #choose word and make some other variables
 word=words[random.randint(0,len(words))];
-lives=4
+lives=5
 score=0
 answerGuessedA = False
 wrongA=False
 def playrounds():
     score=0
     while score<999:
-        lives=4
+        lives=5
         guessedLetters.clear()
         word=words[random.randint(0,len(words)-1)];
         while lives>0:
