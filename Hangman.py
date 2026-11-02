@@ -211,14 +211,15 @@ print("")
 print("")
 
 #make the guy
-def makeGuy(stage,s,h,hs,st,sts):
+def makeGuy(stage,s,h,hs,st,sts,fh,qh):
     print(boxTop)
     hin=""
     if h==False:
         hin="yes"
     else:
         hin="no"
-    print("\u2764\uFE0F  lives: "+str(stage)+"\t\u2022 score: "+str(s)+"\t\U0001F4A1hint available: "+hin+"\t\U0001F494 hints used: "+str(hs)+"\t\u2B50 stars: "+str(st)+"\t\U0001F320 star streak: "+str(sts))
+    print("\U0001F4CA  stats:\t\u2022 score: "+str(s)+"\t\U0001F494 hints used: "+str(hs)+"\t\u2B50 stars: "+str(st)+"\t  \U0001F320 star streak: "+str(sts))
+    print("\U0001F4B0  resources:\t\u2764\uFE0F   lives: "+str(stage)+"\t\U0001F56F free hints: "+str(fh)+"\t\U0001F50D quick hints:"+str(qh)+"\t\U0001F4A1 hint available: "+hin)
     print("\n_____________");
     print("|       |");
     if stage == 7:
@@ -390,13 +391,16 @@ def playrounds():
     hintsUsed=0
     stars=0
     starStreak=0
-    while score<99:
-
+    freeHints=1
+    quickHints=1
+    while score<9999:
+        
         lives=7
         guessedLetters.clear()
         word=words[random.randint(0,len(words)-1)];
         hintUsed=False
-
+        if score%5==0:
+            freeHints+=1
         while lives>0:
             print(boxBottom)
             #choose word aand make some other variables
@@ -407,7 +411,7 @@ def playrounds():
             giveHint=False
 
             #make the guy to set up
-            makeGuy(lives,score,hintUsed and (lives<6),hintsUsed,stars,starStreak)
+            makeGuy(lives,score,hintUsed and (lives<6),hintsUsed,stars,starStreak,freeHints,quickHints)
             checkpointM(score,stars,starStreak)
             print(placeholder(word))
             print("\nletter and words already guessed:")
@@ -418,7 +422,10 @@ def playrounds():
             for i in guessedLetters:
                 if i == answer:
                     answerGuessedA = True
-            if answer=="hint" and lives>0 and lives<6 and hintsUsed>5:
+            canHint=0
+            if quickHints>=1:
+                canHint=2
+            if answer=="hint" and lives>0 and lives<6+canHint and hintsUsed<5:
                 hintask=input("\nsay the magic words and try again.\n")
                 if hintask=="hint":
                     print("were you expecting something? i told you, say the magic words like this:\"may i have a hint please\" and your wish will be granted! geez, you are so impatient")
@@ -438,7 +445,7 @@ def playrounds():
                         print("\nlearn proper punctuation and try again >:(\n")
                 else:
                     print("\nbad manners? no hint for you!\n")
-            if answer=="may i have a hint please" and lives>1 and lives<6:
+            if answer=="may i have a hint please" and lives>1 and lives<6+canHint:
                 hintasktwo=input("\npunctuation counts, try again!\n")
                 if hintasktwo=="may i have a hint please?":
                     hintaskthree=input("\nI'm not your professor, you don't need to be so formal with me! just say\"hint please!\" like it says in the instructions!\n")
@@ -452,7 +459,7 @@ def playrounds():
                         print("\nyou should focus on your manners, you know that?\n")
                 else:
                     print("\nlearn proper punctuation and try again >:(\n")
-            if answer=="may i have a hint please?" and lives>1 and lives<6:
+            if answer=="may i have a hint please?" and lives>1 and lives<6+canHint:
                 hintaskthree=input("\nI'm not your professor, you don't need to be so formal with me! just say\"hint please!\" like it says in the instructions!\n")
                 if hintaskthree=="hint please!":
                     hintaskfour=input("\nin the instructions, it says to just type and enter \"hint\"! you don't need to be so verbose, we've barely met!\n")
@@ -462,7 +469,7 @@ def playrounds():
                         print("\nwhat did i just say? its in the instructions, just type it in! I'm telling you, no funny business this time!\n")
                 else:
                     print("\nyou should focus on your manners, you know that?\n")
-            if answer=="hint please!" and lives >1 and lives<6:
+            if answer=="hint please!" and lives >1 and lives<6+canHint:
                 hintaskfour=input("\nin the instructions, it says to just type and enter \"hint\"! you don't need to be so verbose, we've barely met!\n")
                 if hintaskfour=="hint":
                     giveHint=True
@@ -473,7 +480,12 @@ def playrounds():
             if giveHint==True:
                 print("\nyour hint for this word is: \n\n\""+hints[words.index(word,0,len(words))]+"\"")
                 hintsUsed+=1
-                lives-=1
+                if canHint==2:
+                    quickHints-=1
+                if freeHints>=1:
+                    freeHints-=1
+                else:
+                    lives-=1
             elif answer=="help":
                 print("Type a letter into the terminal and press enter to guess a letter, once you have all the letters or have a guess for the full word, type it in to guess! \n*****BE SURE TO INCLUDE ALL PUNCTUATIONS, SPACES, etc. NO UPPERCASE LETTERS!!*****\nAfter you have less than 6 lives, you are allowed to exchange a life for a hint by typing \"hint\"! Be careful though, as helpful as some hits can be, many hints are more obscure references and may seem unrelated if you don't catch the reference. \nThere is a mechanic called \"stars\" in this version, requiring you to guess the word without using more than 2 lives. This means you cannot get the star if you need a hint, as the hint will put you at 4 lives, making that round inelligible for the star. there is also a streak counter that counts your consecutive stars.\n there are secret messages at certain checkpoints, 5 score, 10 score, so on. there is also messages associated with stars and most importantly star streaks, which are more or less frequent, be careful and hit those goals!")
             elif len(answer)>1:
@@ -485,7 +497,7 @@ def playrounds():
                         starStreak+=1
                     else:
                         starStreak=0
-                    makeGuy(-1,score,hintUsed,hintsUsed,stars,starStreak)
+                    makeGuy(-1,score,hintUsed,hintsUsed,stars,starStreak,freeHints,quickHints)
                     print("\nYou saved hangman!")
                     lives=0
                     
@@ -508,8 +520,10 @@ def playrounds():
                 else:
                     lives-=1
                     if lives == 0:
-                        makeGuy(0,score,hintUsed,hintsUsed,stars,starStreak)
+                        makeGuy(0,score,hintUsed,hintsUsed,stars,starStreak,freeHints,quickHints)
                         score=0
+                        freeHints=1
+                        quickHints=1
                         print("the word/phrase was "+word+" by the way.")
                         print("\nhangman is no more, how could you! >:((\nRewinding...")
                         
@@ -530,8 +544,10 @@ def playrounds():
                     guessedLetters.append(answer)
                     lives-=1
                     if lives == 0:
-                        makeGuy(0,score,hintUsed,hintsUsed,stars,starStreak)
+                        makeGuy(0,score,hintUsed,hintsUsed,stars,starStreak,freeHints,quickHints)
                         score=0
+                        freeHints=1
+                        quickHints=1
                         print("the word/phrase was "+word+" by the way.")
                         print("\nhangman is no more, how could you! >:((\nRewinding...\nThe word was "+word+" by the way")
                     else:
