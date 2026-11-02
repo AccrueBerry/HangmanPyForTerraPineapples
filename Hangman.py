@@ -159,40 +159,40 @@ alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r
 guessedLetters = [""]
 
 #checkpoint messages,row 1 is score messages. 0 score is intructions and ps row 2 is stars total
-checkpointMessages=[["P.S. if inputs do not seem to work, know that I made this in Visual Studio Code.\n If it is being run in Visual Studio Code, run it in the terminal by running the python file. \n Otherwise, it will be run in the output and it will not take inputs from the user.\n\nSince the time is about halloween right now, it will be somewhat halloween themed, think common costumes, media, and general halloween stuff.\nIt won't be all halloween, so expect other words, boatloads of media references, famous figures, and many, many long quotes!\n\n\nGuess the letters until you get the word and type the full word outright to win(all lowercase, all punctuation). you have 7 lives. good luck!\n\ntype and enter \"help\" for extra info and help!",
-                    "5 in a row! you got this! keep going!!",
-                    "10 in a row! you're killing it!",
-                    "20! I know this game is endless, but there is a special secret at 99 score!",
-                    "50! halfway there! look at how far you've come!",
+checkpointMessages=[["\u2022 : P.S. if inputs do not seem to work, know that I made this in Visual Studio Code.\n If it is being run in Visual Studio Code, run it in the terminal by running the python file. \n Otherwise, it will be run in the output and it will not take inputs from the user.\n\nSince the time is about halloween right now, it will be somewhat halloween themed, think common costumes, media, and general halloween stuff.\nIt won't be all halloween, so expect other words, boatloads of media references, famous figures, and many, many long quotes!\n\n\nGuess the letters until you get the word and type the full word outright to win(all lowercase, all punctuation). you have 7 lives. good luck!\n\ntype and enter \"help\" for extra info and help!",
+                    "\u2022 : 5 in a row! you got this! keep going!!",
+                    "\u2022 : 10 in a row! you're killing it!",
+                    "\u2022 : 20! I know this game is endless, but there is a special secret at 99 score!",
+                    "\u2022 : 50! halfway there! look at how far you've come!",
                     #67 score
-                    "can't escape it",
-                    "three quarters the way there!",
-                    "one hundred. your first of many. there is more beyond this, though. keep going!",
-                    "150, this is my first python project on vscode, and the first personal project ive done on vs code. thanks for being so kind as to stay for so long! have some cake!\n\U0001F382",
-                    "200. two hundred cycles. you can't just stop there, more awaits at the 1000 mark!",
-                    "five. hundred. cycles. half way there. you can do this!"
-                    "Look at what you've done. You could have stopped a hundreds of cycles ago. all the previous messages were fake. there is no loving family. there is no children. there is no wife. You put his body together just to kill him. His head. His Body. His Organs. His nerves. His skin. His limbs. His mind. For your enjoyment. You think you hate someone in your life. Think about how much hangman hates you. Really,hangman does not hate you. Hangman is dissapointed in you. Think back to those times your boss lay you off. When your mom forgot to cook dinner. Your teacher skipped a lesson. Your parents drive you to school late. Your child throws something at you. Your family misses your spouse's funeral. Did you look back in anger? Or did you feel dissappointed? You can only be angry for so long. It is buddhist belief, at least as I've been told by a friend, that hate is a sickness, an illness, and the healthiest thing is to let go. Your wrath does'nt fix your lost ranked match, but it does break your controller. Exerting your anger healthily is the first step of recovery. You can often feel dissapointed though. Dissapointed that this higher power has faled you. What can you do? You can't rewind and undo the world's wrongs. Dissapointment clings until you see improvement. Your teacher eventually taught that lesson. Your child apologized and has nevr acted once since, and you have grown closer than ever. In the bible, it Jesus was crucified by is own oppressed people. His children. And he forgave them, he never gets angry. He is not dissapointed. In the end, he knew they had reasons, it was god's plan, and his plan came to be. You must realize that there are reasons to everything. Your teacher has a falling out with their spouse. Your mom was chewed out by her boss for skipping a lesson after her argument with your dad. You threw a shoe at her for getting you to school too late. your dad couldn't make it to her funeral, he'd been drinking too much beforehand and got into an accident on his way. there is always a reason. hangman is dissapointed in you because he want you to be better. he holds no grudge, even if both his parents just died. even if he's just been brought back on the brink of his death, hanging for his crimes of robbery. everyone was dissapointed at him too.  they didn't know how much those funerals cost. or do they? are you dissapointed at the crowd? if a kid in the crowd had buried his brother who's died in a robbery a year ago was in the crowd, would you be dissapointed. there is always a reason. always forgive. hangman loves you \u2764\uFE0F"],
-                    ["your first star, get more to get secret dialogues and messages :P",
-                     "5 stars, what a pro :O!",
-                     "10 stars. is this even hard for you?",
-                     "20 stars? added hints because I thought it'd be too hard, but maybe i didn't",
-                     "40 \u2B50 ?! if you are a terra reviewer, Its crazy you made it this deep! there isn't much special about this one, so i don't think any terra reviewer or anyone for that matter will see most of my monologues. i thought reviews were supposed to last less than 2 minutes, so you should probably move on. thank you for playing!",
-                     "50 stars!!! thats like, half of 100!",
-                     "really, why are you still here? to be fair, a good amount of secrets are left in for the star streaks, but there are some for 90 and 100 stars.",
-                     "hangman, the character you see on your screen, is married with two children, named ratticus and heidi. his favorite meal is cheesed cauliflower on a winter day, and his favorite weather is sunny fall/winter days with some clouds to watch, as he loves watching clouds. he works as a mailboy and chef for a local restaurant. he drives a jeep and is a family man, speding as much time as he can with his family.",
-                     "100 stars... I'd say you've reached rockstardom, but true rockstardrom awaits at 99 star streak!"],
-                     ["So you've made it with barely a single mishap. if you've seen the message from 999 score, theres no worry this time. hangman doesn't feel anything until you use a hint or introduce one of his limbs. your stars broke his seal. really, he is awake. it was all one bad dream. hangman thanks you for breaking him out of his torture. he is going back to watch clouds with his family, and yes, his mom and dad are fine. he has a drone, maybe he'll free the retirement home! i really like that line. you've dunnit! you've hit TRUE rockstardom! we are very proud of you, though you should probably, definitely take a break from screens, touch some grass and stretch. thanks for playing!!! (future runs are played with a hang-man doll, a new toy they started making after you spread your story to the masses. the ghost is replaced with heidi in costume.) have a good day, and remember to always love!",
-                     "3 stars in a row! you really are good at this!",
-                     "5 stars in a row, a faint glow emanates somewhere in the tremulous fields..",
-                     "10 stars in a row, you are filled with determination",
-                     "15 stars in a row, rockstardom awaits.",
-                     "you should take a break and stretch. seriously. 20 streak is probably enough for now.",
-                     "50. wow. are you cheating? ",
-                     "75 streak. My mains in smash bros are isabelle, dr mario and corrin, though i play a fair share of other characters, though i don't get a lotta playtime on it, i don't have a switch. remember to drink water! water is very good for you.",
-                     "90. you might be able to free hang man if you get a high enough streak.",
-                     "its a little too late.. hang man has already suffered a thousand cycles. mind scrambled, mind frayed, mind blank. he's woken up, but he'll never be the same again. he is a vegetable. he is healing and has hopes to make a full recovery soon, future rounds are played on the hospital monitor.",
-                     "he has recovered, and is living happily with his family. but nothing in gold can truly stay.",
-                     "\"hey... i don't remember buying that lamp.\" hangman says as he stares at the lamp on his nightstand, but he realizes it looks does not look right, it is almost flat, fuzzy around the edges, and the color shifts oddly. he has been staring at it for 2 days. he can't take his off it. his family tries, and to no avail, to break his trance. and he woke up. he is on that rope again, with both his legs missing. it was just a dream. he didn't have his family. his \"wife\" is in that crowd, just like everyone else. he was the one who stole from her, after all. you bought him that sweet relief, but only for so long. maybe if your streak was just a bit higher that first time, he'd be here. maybe you can save him, next time, without ever breaking that streak. he doesn't know what's real, he can't trust what he knows. good luck."]
+                    "\u2022 : can't escape it",
+                    "\u2022 : three quarters the way there!",
+                    "\u2022 : one hundred. your first of many. there is more beyond this, though. keep going!",
+                    "\u2022 : 150, this is my first python project on vscode, and the first personal project ive done on vs code. thanks for being so kind as to stay for so long! have some cake!\n\U0001F382",
+                    "\u2022 : 200. two hundred cycles. you can't just stop there, more awaits at the 1000 mark!",
+                    "\u2022 : five. hundred. cycles. half way there. you can do this!",
+                    "\u2022 : Look at what you've done. You could have stopped a hundreds of cycles ago. all the previous messages were fake. there is no loving family. there is no children. there is no wife. You put his body together just to kill him. His head. His Body. His Organs. His nerves. His skin. His limbs. His mind. For your enjoyment. You think you hate someone in your life. Think about how much hangman hates you. Really,hangman does not hate you. Hangman is dissapointed in you. Think back to those times your boss lay you off. When your mom forgot to cook dinner. Your teacher skipped a lesson. Your parents drive you to school late. Your child throws something at you. Your family misses your spouse's funeral. Did you look back in anger? Or did you feel dissappointed? You can only be angry for so long. It is buddhist belief, at least as I've been told by a friend, that hate is a sickness, an illness, and the healthiest thing is to let go. Your wrath does'nt fix your lost ranked match, but it does break your controller. Exerting your anger healthily is the first step of recovery. You can often feel dissapointed though. Dissapointed that this higher power has faled you. What can you do? You can't rewind and undo the world's wrongs. Dissapointment clings until you see improvement. Your teacher eventually taught that lesson. Your child apologized and has nevr acted once since, and you have grown closer than ever. In the bible, it Jesus was crucified by is own oppressed people. His children. And he forgave them, he never gets angry. He is not dissapointed. In the end, he knew they had reasons, it was god's plan, and his plan came to be. You must realize that there are reasons to everything. Your teacher has a falling out with their spouse. Your mom was chewed out by her boss for skipping a lesson after her argument with your dad. You threw a shoe at her for getting you to school too late. your dad couldn't make it to her funeral, he'd been drinking too much beforehand and got into an accident on his way. there is always a reason. hangman is dissapointed in you because he want you to be better. he holds no grudge, even if both his parents just died. even if he's just been brought back on the brink of his death, hanging for his crimes of robbery. everyone was dissapointed at him too.  they didn't know how much those funerals cost. or do they? are you dissapointed at the crowd? if a kid in the crowd had buried his brother who's died in a robbery a year ago was in the crowd, would you be dissapointed. there is always a reason. always forgive. hangman loves you \u2764\uFE0F"],
+                    ["\u2B50 : your first star, get more to get secret dialogues and messages :P",
+                     "\u2B50 : 5 stars, what a pro :O!",
+                     "\u2B50 : 10 stars. is this even hard for you?",
+                     "\u2B50 : 20 stars? added hints because I thought it'd be too hard, but maybe i didn't",
+                     "\u2B50 : 40 \u2B50 ?! if you are a terra reviewer, Its crazy you made it this deep! there isn't much special about this one, so i don't think any terra reviewer or anyone for that matter will see most of my monologues. i thought reviews were supposed to last less than 2 minutes, so you should probably move on. thank you for playing!",
+                     "\u2B50 : 50 stars!!! thats like, half of 100!",
+                     "\u2B50 : really, why are you still here? to be fair, a good amount of secrets are left in for the star streaks, but there are some for 90 and 100 stars.",
+                     "\u2B50 : hangman, the character you see on your screen, is married with two children, named ratticus and heidi. his favorite meal is cheesed cauliflower on a winter day, and his favorite weather is sunny fall/winter days with some clouds to watch, as he loves watching clouds. he works as a mailboy and chef for a local restaurant. he drives a jeep and is a family man, speding as much time as he can with his family.",
+                     "\u2B50 : 100 stars... I'd say you've reached rockstardom, but true rockstardrom awaits at 99 star streak!"],
+                     ["\U0001F320 : So you've made it with barely a single mishap. if you've seen the message from 999 score, theres no worry this time. hangman doesn't feel anything until you use a hint or introduce one of his limbs. your stars broke his seal. really, he is awake. it was all one bad dream. hangman thanks you for breaking him out of his torture. he is going back to watch clouds with his family, and yes, his mom and dad are fine. he has a drone, maybe he'll free the retirement home! i really like that line. you've dunnit! you've hit TRUE rockstardom! we are very proud of you, though you should probably, definitely take a break from screens, touch some grass and stretch. thanks for playing!!! (future runs are played with a hang-man doll, a new toy they started making after you spread your story to the masses. the ghost is replaced with heidi in costume.) have a good day, and remember to always love!",
+                     "\U0001F320 : 3 stars in a row! you really are good at this!",
+                     "\U0001F320 : 5 stars in a row, a faint glow emanates somewhere in the tremulous fields..",
+                     "\U0001F320 : 10 stars in a row, you are filled with determination",
+                     "\U0001F320 : 15 stars in a row, rockstardom awaits.",
+                     "\U0001F320 : you should take a break and stretch. seriously. 20 streak is probably enough for now.",
+                     "\U0001F320 : 50. wow. are you cheating? ",
+                     "\U0001F320 : 75 streak. My mains in smash bros are isabelle, dr mario and corrin, though i play a fair share of other characters, though i don't get a lotta playtime on it, i don't have a switch. remember to drink water! water is very good for you.",
+                     "\U0001F320 : 90. you might be able to free hang man if you get a high enough streak.",
+                     "\U0001F320 : its a little too late.. hang man has already suffered a thousand cycles. mind scrambled, mind frayed, mind blank. he's woken up, but he'll never be the same again. he is a vegetable. he is healing and has hopes to make a full recovery soon, future rounds are played on the hospital monitor.",
+                     "\U0001F320 : he has recovered, and is living happily with his family. but nothing in gold can truly stay.",
+                     "\U0001F320 : \"hey... i don't remember buying that lamp.\" hangman says as he stares at the lamp on his nightstand, but he realizes it looks does not look right, it is almost flat, fuzzy around the edges, and the color shifts oddly. he has been staring at it for 2 days. he can't take his off it. his family tries, and to no avail, to break his trance. and he woke up. he is on that rope again, with both his legs missing. it was just a dream. he didn't have his family. his \"wife\" is in that crowd, just like everyone else. he was the one who stole from her, after all. you bought him that sweet relief, but only for so long. maybe if your streak was just a bit higher that first time, he'd be here. maybe you can save him, next time, without ever breaking that streak. he doesn't know what's real, he can't trust what he knows. good luck."]
                      ]
 
 #get variables for making the box
@@ -214,7 +214,7 @@ print("")
 def makeGuy(stage,s,h,hs,st,sts):
     print(boxTop)
     hin=""
-    if h:
+    if h==False:
         hin="yes"
     else:
         hin="no"
@@ -296,12 +296,15 @@ def placeholder(w):
                     placeholderp+="  "
     return placeholderp
 #checkpoint message system
+#this really bugging me why isnt it letting me use array lists raghfdrggrdddsfesddrguyerge
 def checkpointM(score,star,streak):
     row=-1
     col=-1
-    if score==5 or score==10 or score==20 or score==50 or score==100 or score==200 or score==500 or score==150 or score==67 or (score==999 and streak!=999) or (score==999 and streak==999):
+    if score==0 or score==5 or score==10 or score==20 or score==50 or score==100 or score==200 or score==500 or score==150 or score==67 or (score==999 and streak!=999) or (score==999 and streak==999):
         row=0
-        if score==5:
+        if score==0:
+            col=0
+        elif score==5:
             col=1
         elif score==10:
             col=2
@@ -323,8 +326,9 @@ def checkpointM(score,star,streak):
             col=10
         elif score==999:
             col=11
-        print(checkpointMessages[row,col])
-    if star==1 or score==5 or score==10 or score==20 or score==40 or score==50 or score==75 or score==90 or score==100:
+        print(checkpointMessages[row][col])
+        checkpointMessages[row][col]=""
+    if star==1 or star==5 or star==10 or star==20 or star==40 or star==50 or star==75 or star==90 or star==100:
         row=1
         if star==1:
             col=0
@@ -344,7 +348,8 @@ def checkpointM(score,star,streak):
             col=7
         elif star==100:
             col=8
-        print(checkpointMessages[row,col])
+        print(checkpointMessages[row][col])
+        checkpointMessages[row][col]=""
     if streak==3 or streak==5 or streak==10 or streak==15 or streak==20 or streak==50 or streak==75 or streak==90 or (streak==999 and score!=999)  or streak==1000 or streak==1001:
         row=2
         if streak==3:
@@ -369,8 +374,9 @@ def checkpointM(score,star,streak):
             col=10
         elif streak==1001:
             col=11
-        print(checkpointMessages[row,col])
-
+        print(checkpointMessages[row][col])
+        checkpointMessages[row][col]=""
+    
 
 #choose word and make some other variables
 word=words[random.randint(0,len(words))];
@@ -390,10 +396,10 @@ def playrounds():
         guessedLetters.clear()
         word=words[random.randint(0,len(words)-1)];
         hintUsed=False
-        checkpointM(score,stars,starStreak)
+
         while lives>0:
             print(boxBottom)
-            #choose word and make some other variables
+            #choose word aand make some other variables
 
             answerGuessedA=False
             wrongA=True
@@ -401,11 +407,13 @@ def playrounds():
             giveHint=False
 
             #make the guy to set up
-            makeGuy(lives,score,hintUsed,hintsUsed,stars,starStreak)
+            makeGuy(lives,score,hintUsed and (lives<6),hintsUsed,stars,starStreak)
+            checkpointM(score,stars,starStreak)
             print(placeholder(word))
             print("\nletter and words already guessed:")
             print(guessedLetters)
             print("\n")
+            
             answer = input("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:\n")
             for i in guessedLetters:
                 if i == answer:
@@ -486,15 +494,15 @@ def playrounds():
                     if answer[1]=="g":
                         print(word)
                     elif answer[1]=="p":
-                        word=words[int(answer[2])]
+                        word=words[(int(answer[2])*10)+(input(answer[3]))]
                     elif answer[1]=="l":
                         lives=7
                     elif answer[1]=="s":
-                        score=int(answer[2])
+                        score=int(answer[2])*100+int(answer[3])*10+int(answer[4])
                     elif answer[1]=="q":
-                        stars+=int(answer[2])
+                        stars=int(answer[2])*100+int(answer[3])*10+int(answer[4])
                     elif answer[1]=="w":
-                        starStreak+=int(answer[2])
+                        starStreak=int(answer[2])*100+int(answer[3])*10+int(answer(4))
                 elif answerGuessedA==True:
                     print("\nYou've guess that word already, please guess another answer!")
                 else:
@@ -502,8 +510,9 @@ def playrounds():
                     if lives == 0:
                         makeGuy(0,score,hintUsed,hintsUsed,stars,starStreak)
                         score=0
-                        print("\nhangman is no more, how could you! >:((\nRewinding...")
                         print("the word/phrase was "+word+" by the way.")
+                        print("\nhangman is no more, how could you! >:((\nRewinding...")
+                        
                     else:
                         print("\nThat was the wrong word, try again!")
                         guessedLetters.append(answer)
@@ -523,8 +532,8 @@ def playrounds():
                     if lives == 0:
                         makeGuy(0,score,hintUsed,hintsUsed,stars,starStreak)
                         score=0
-                        print("\nhangman is no more, how could you! >:((\nRewinding...\nThe word was "+word+" by the way")
                         print("the word/phrase was "+word+" by the way.")
+                        print("\nhangman is no more, how could you! >:((\nRewinding...\nThe word was "+word+" by the way")
                     else:
                         print("\nThat letter is not in the answer, try again!")
         print(boxBottom)
