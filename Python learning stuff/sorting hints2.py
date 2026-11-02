@@ -128,16 +128,17 @@ hints = ["casper the?",
         "a poem from 1923 by robert frost where the title is the final line. the line is also referenced in two young the giant songs,\'daydreamer\' and \'life is a long goodbye\'",
         "something you'd say if you made it all the way to 99 score",
         "a popular meme from a while ago that is associated with either a dial similar to a pressure gague or a man leaning back surrounded my floating leaves with a green soft smiling emoticon beside him.",
-        "a popular whodunnit game popularized 2020 by the pandemic, missing a letter"
-
-
-
-
-
-
-
-
-
-
-
-]
+        "a popular whodunnit game popularized 2020 by the pandemic, missing a letter",
+        "this is how i was before i knew i had to do another ten on the same project",
+        "the fist line of a 2018 tumblr post, from the view of the narrator pointing a gun at a mushroom who responds to the ",
+        "from a 2018 tumblr post about a mushroom",
+        "from a 2018 tumblr post about a mushroom",
+        "from a 2018 tumblr post about a mushroom",
+        "from a 2018 tumblr pust about a mushroom",
+        "line from \'drone song\', a song from edgehill's first album \'ode to the greyhouse\'.",
+        "a line from a famous work by a greek philosopher that inspired a famous piece of filler text used in many websites today.",
+        "mega niche reference I dont't expect you to get this one",
+        "(new lingo)",
+        "instructions",
+        "a recorded interaction between a fisher and an elderly man in his truck that went viral on social media"]
+print(len(hints))
