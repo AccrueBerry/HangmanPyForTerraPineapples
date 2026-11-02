@@ -167,6 +167,10 @@ checkpointMessages=[["P.S. if inputs do not seem to work, know that I made this 
                     #67 score
                     "can't escape it",
                     "three quarters the way there!",
+                    "one hundred. your first of many. there is more beyond this, though. keep going!",
+                    "150, this is my first python project on vscode, and the first personal project ive done on vs code. thanks for being so kind as to stay for so long! have some cake!\n\U0001F382",
+                    "200. two hundred cycles. you can't just stop there, more awaits at the 1000 mark!",
+                    "five. hundred. cycles. half way there. you can do this!"
                     "Look at what you've done. You could have stopped a hundreds of cycles ago. all the previous messages were fake. there is no loving family. there is no children. there is no wife. You put his body together just to kill him. His head. His Body. His Organs. His nerves. His skin. His limbs. His mind. For your enjoyment. You think you hate someone in your life. Think about how much hangman hates you. Really,hangman does not hate you. Hangman is dissapointed in you. Think back to those times your boss lay you off. When your mom forgot to cook dinner. Your teacher skipped a lesson. Your parents drive you to school late. Your child throws something at you. Your family misses your spouse's funeral. Did you look back in anger? Or did you feel dissappointed? You can only be angry for so long. It is buddhist belief, at least as I've been told by a friend, that hate is a sickness, an illness, and the healthiest thing is to let go. Your wrath does'nt fix your lost ranked match, but it does break your controller. Exerting your anger healthily is the first step of recovery. You can often feel dissapointed though. Dissapointed that this higher power has faled you. What can you do? You can't rewind and undo the world's wrongs. Dissapointment clings until you see improvement. Your teacher eventually taught that lesson. Your child apologized and has nevr acted once since, and you have grown closer than ever. In the bible, it Jesus was crucified by is own oppressed people. His children. And he forgave them, he never gets angry. He is not dissapointed. In the end, he knew they had reasons, it was god's plan, and his plan came to be. You must realize that there are reasons to everything. Your teacher has a falling out with their spouse. Your mom was chewed out by her boss for skipping a lesson after her argument with your dad. You threw a shoe at her for getting you to school too late. your dad couldn't make it to her funeral, he'd been drinking too much beforehand and got into an accident on his way. there is always a reason. hangman is dissapointed in you because he want you to be better. he holds no grudge, even if both his parents just died. even if he's just been brought back on the brink of his death, hanging for his crimes of robbery. everyone was dissapointed at him too.  they didn't know how much those funerals cost. or do they? are you dissapointed at the crowd? if a kid in the crowd had buried his brother who's died in a robbery a year ago was in the crowd, would you be dissapointed. there is always a reason. always forgive. hangman loves you \u2764\uFE0F"],
                     ["your first star, get more to get secret dialogues and messages :P",
                      "5 stars, what a pro :O!",
@@ -188,7 +192,7 @@ checkpointMessages=[["P.S. if inputs do not seem to work, know that I made this 
                      "90. you might be able to free hang man if you get a high enough streak.",
                      "its a little too late.. hang man has already suffered a thousand cycles. mind scrambled, mind frayed, mind blank. he's woken up, but he'll never be the same again. he is a vegetable. he is healing and has hopes to make a full recovery soon, future rounds are played on the hospital monitor.",
                      "he has recovered, and is living happily with his family. but nothing in gold can truly stay.",
-                     "\"hey... i don't remember buying that lamp.\" hangman says as he stares at the lamp on his nightstand, but he realizes it looks does not look right, it is almost flat, fuzzy around the edges, and the color shifts oddly. he has been staring at it for 2 days. he can't take his off it. his family tries, to no avail, wake him up. "]
+                     "\"hey... i don't remember buying that lamp.\" hangman says as he stares at the lamp on his nightstand, but he realizes it looks does not look right, it is almost flat, fuzzy around the edges, and the color shifts oddly. he has been staring at it for 2 days. he can't take his off it. his family tries, and to no avail, to break his trance. and he woke up. he is on that rope again, with both his legs missing. it was just a dream. he didn't have his family. his \"wife\" is in that crowd, just like everyone else. he was the one who stole from her, after all. you bought him that sweet relief, but only for so long. maybe if your streak was just a bit higher that first time, he'd be here. maybe you can save him, next time, without ever breaking that streak. he doesn't know what's real, he can't trust what he knows. good luck."]
                      ]
 
 #get variables for making the box
@@ -291,6 +295,82 @@ def placeholder(w):
                     placeholderp+=i
                     placeholderp+="  "
     return placeholderp
+#checkpoint message system
+def checkpointM(score,star,streak):
+    row=-1
+    col=-1
+    if score==5 or score==10 or score==20 or score==50 or score==100 or score==200 or score==500 or score==150 or score==67 or (score==999 and streak!=999) or (score==999 and streak==999):
+        row=0
+        if score==5:
+            col=1
+        elif score==10:
+            col=2
+        elif score==20:
+            col=3
+        elif score==50:
+            col=4
+        elif score==67:
+            col=5
+        elif score==75:
+            col=6
+        elif score==100:
+            col=7
+        elif score==150:
+            col=8
+        elif score==200:
+            col=9
+        elif score==500:
+            col=10
+        elif score==999:
+            col=11
+        print(checkpointMessages[row,col])
+    if star==1 or score==5 or score==10 or score==20 or score==40 or score==50 or score==75 or score==90 or score==100:
+        row=1
+        if star==1:
+            col=0
+        elif star==5:
+            col=1
+        elif star==10:
+            col=2
+        elif star==20:
+            col=3
+        elif star==40:
+            col=4
+        elif star==50:
+            col=5
+        elif star==75:
+            col=6
+        elif star==90:
+            col=7
+        elif star==100:
+            col=8
+        print(checkpointMessages[row,col])
+    if streak==3 or streak==5 or streak==10 or streak==15 or streak==20 or streak==50 or streak==75 or streak==90 or (streak==999 and score!=999)  or streak==1000 or streak==1001:
+        row=2
+        if streak==3:
+            col=1
+        elif streak==5:
+            col=2
+        elif streak==10:
+            col=3
+        elif streak==15:
+            col=4
+        elif streak==20:
+            col=5
+        elif streak==50:
+            col=6
+        elif streak==75:
+            col=7
+        elif streak==90:
+            col=8
+        elif streak==999 and score!=999:
+            col=9
+        elif streak==1000:
+            col=10
+        elif streak==1001:
+            col=11
+        print(checkpointMessages[row,col])
+
 
 #choose word and make some other variables
 word=words[random.randint(0,len(words))];
@@ -305,24 +385,27 @@ def playrounds():
     stars=0
     starStreak=0
     while score<99:
+
         lives=7
         guessedLetters.clear()
         word=words[random.randint(0,len(words)-1)];
         hintUsed=False
-        
+        checkpointM(score,stars,starStreak)
         while lives>0:
             print(boxBottom)
             #choose word and make some other variables
+
             answerGuessedA=False
             wrongA=True
             addedToGList=False
             giveHint=False
+
             #make the guy to set up
             makeGuy(lives,score,hintUsed,hintsUsed,stars,starStreak)
             print(placeholder(word))
             print("\nletter and words already guessed:")
             print(guessedLetters)
-            print("")
+            print("\n")
             answer = input("type the letter you wish to enter. if you have a guess for the word, punch it in!\nType here:\n")
             for i in guessedLetters:
                 if i == answer:
