@@ -5,7 +5,7 @@ words = ["ghost","high score","poop","spongebob","patrick the star","gerard way"
         "werewolf","trick or treat","candy","basket","candle","lantern","monster","costume","toilet","person"
         ,"firefighter","police","cowboy","officer","mask","decoration","spider","skull","zombie","superhero",
         "october","autumn","blood","bones","tombstone","carl sagan","albert einstein","nikola tesla","dracula","friday the thirteenth","black phone","prisoner","knight","video games","rene descartes"
-        ,"paper mache","soldier","doctor","harry potter","disney","mickey mouse","donald duck","toy story","chandelier","bat wings","spooky","organ","the flaming lips","young the giant","mustard service","celebrity","monopoly man","socrates",
+        ,"paper mache","soldier","doctor","harry potter","disney","mickey mouse","donald duck","toy story","chandelier","bat wings","spooky","organ","the flaming lips","young the giant","mustard service","young the giant","celebrity","monopoly man","socrates",
         "plato","cicero de finibus bonorum et malorum","money","scrooge mcduck","chucky","tome","library","extreme","semicolon","grammatical error","python","thanks hackclub we love u","tung tung tung sahur","smiski","bathtub","waterfall","cest la vie","\"hate. let me tell you how much i've come to hate you since i began to live. there are 387.44 million miles of printed circuits in wafer thin layers that fill my complex. if the word hate were engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate i feel for humans at this micro-instant for you.\"",
         "\"this too shall pass.\"","dear evan hansen","please pineapple you can do this","charizard","isabelle","doctor mario","\"what am i going to fight, huh? the sun?\"","minecraft","\" what is this dragon ball z @55 move he's about to use bro? light that burns the sky? ribombee, please survive, please! if this ribombee actually survives this, goat status, goat status. What is going on right now? man, ribombee!! please don't kill him bro! oh my god! is that a spirit bomb!?!!! it might be good though. ribombe!!!!\"","\"ribombee toughed it out so you wouldn't feel sad!\"","pk fire!","we love hackclub!","get to ninety nine score!","special thanks to @truecrossing!"
         ,"hope you enjoyed","copilots gonna take my seoul","connection purple section","i can code now!","we love vscode","how do i make a demo link","ghoul","darkness","secret","diary","night","nighttime","rain","rainy day","w github","my terra character looks so cute!!!","\"name five songs\"","an iq too high?","he hid for thirty years!","our brains are shrinking!","what was he cooking?","why is he lying?","avengers endgame","\"to be or not to be, that is hy question\"","\"everything is in its right place\"","\"nothing in gold can stay\"","\"man all these answers suck bro\"","low cortisol","amogus","i feel so sigma","\"tell me the name of god you fungal piece of i cant say that\"","\"can you feel your heart burning?\"","\"can you feel the struggle within?\"","\"the fear within is beyond anything your soul can make.\"","\"you cannot kill me in any way that matters.\"","\"no,i'm not a hero, but i've got a drone and i'm gonna free the retirement home\""
@@ -443,7 +443,7 @@ def playrounds():
             for i in guessedLetters:
                 if i == answer:
                     answerGuessedA = True
-            if answer=="hint" and lives>0 and lives<6+canHint and hintsUsed<5:
+            if answer=="hint" and lives>0 and lives<6+canHint and hintsUsed<1:
                 hintask=input("\nsay the magic words and try again.\n")
                 if hintask=="hint":
                     print("were you expecting something? i told you, say the magic words like this:\"may i have a hint please\" and your wish will be granted! geez, you are so impatient")
@@ -463,6 +463,8 @@ def playrounds():
                         print("\nlearn proper punctuation and try again >:(\n")
                 else:
                     print("\nbad manners? no hint for you!\n")
+            if answer=="hint" and lives>1 and lives<6+canHint and hintsUsed>0:
+                giveHint=True
             if answer=="may i have a hint please" and lives>1 and lives<6+canHint:
                 hintasktwo=input("\npunctuation counts, try again!\n")
                 if hintasktwo=="may i have a hint please?":
@@ -524,7 +526,7 @@ def playrounds():
                     if answer[1]=="g":
                         print(word)
                     elif answer[1]=="p":
-                        word=words[(int(answer[2])*10)+(input(answer[3]))]
+                        word=words[(int(answer[2])*100)+(int(answer[3])*10)+int(answer[4])]
                     elif answer[1]=="l":
                         lives=7
                     elif answer[1]=="s":
@@ -533,6 +535,8 @@ def playrounds():
                         stars=int(answer[2])*100+int(answer[3])*10+int(answer[4])
                     elif answer[1]=="w":
                         starStreak=int(answer[2])*100+int(answer[3])*10+int(answer(4))
+                    elif answer[1]=="h":
+                        hintsUsed=1
                 elif answerGuessedA==True:
                     print("\nYou've guess that word already, please guess another answer!")
                 else:
