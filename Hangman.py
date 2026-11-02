@@ -9,7 +9,9 @@ words = ["ghost","high score","poop","spongebob","patrick the star","gerard way"
         "plato","cicero de finibus bonorum et malorum","money","scrooge mcduck","chucky","tome","library","extreme","semicolon","grammatical error","python","thanks hackclub we love u","tung tung tung sahur","smiski","bathtub","waterfall","cest la vie","\"hate. let me tell you how much i've come to hate you since i began to live. there are 387.44 million miles of printed circuits in wafer thin layers that fill my complex. if the word hate were engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate i feel for humans at this micro-instant for you.\"",
         "\"this too shall pass.\"","dear evan hansen","please pineapple you can do this","charizard","isabelle","doctor mario","\"what am i going to fight, huh? the sun?\"","minecraft","\" what is this dragon ball z @55 move he's about to use bro? light that burns the sky? ribombee, please survive, please! if this ribombee actually survives this, goat status, goat status. What is going on right now? man, ribombee!! please don't kill him bro! oh my god! is that a spirit bomb!?!!! it might be good though. ribombe!!!!\"","\"ribombee toughed it out so you wouldn't feel sad!\"","pk fire!","we love hackclub!","get to ninety nine score!","special thanks to @truecrossing!"
         ,"hope you enjoyed","copilots gonna take my seoul","connection purple section","i can code now!","we love vscode","how do i make a demo link","ghoul","darkness","secret","diary","night","nighttime","rain","rainy day","w github","my terra character looks so cute!!!","\"name five songs\"","an iq too high?","he hid for thirty years!","our brains are shrinking!","what was he cooking?","why is he lying?","avengers endgame","\"to be or not to be, that is hy question\"","\"everything is in its right place\"","\"nothing in gold can stay\"","\"man all these answers suck bro\"","low cortisol","amogus","i feel so sigma","\"tell me the name of god you fungal piece of i cant say that\"","\"can you feel your heart burning?\"","\"can you feel the struggle within?\"","\"the fear within is beyond anything your soul can make.\"","\"you cannot kill me in any way that matters.\"","\"no,i'm not a hero, but i've got a drone and i'm gonna free the retirement home\""
-        ,"\"nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,\"","\"i can see why you love that thing, but you're no windman!\"","w chews","p.s. if inputs do not seem to work, know that i made this in visual studio Code.\\n if it is being run in visual studio code, run it in the terminal by running the python file. \\n otherwise, it will be run in the output and it will not take inputs from the user.\\n\\nsince the time is about halloween right now, it will be somewhat halloween themed, think common costumes, media, and general halloween stuff.\nit won't be all halloween, so expect other words, boatloads of media references, famous figures, and many, many long quotes!","\"this? state? this? hit the road dude this aint no state property this is private property\""];
+        ,"\"nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,\"","\"i can see why you love that thing, but you're no windman!\"","w chews","p.s. if inputs do not seem to work, know that i made this in visual studio Code.\\n if it is being run in visual studio code, run it in the terminal by running the python file. \\n otherwise, it will be run in the output and it will not take inputs from the user.\\n\\nsince the time is about halloween right now, it will be somewhat halloween themed, think common costumes, media, and general halloween stuff.\nit won't be all halloween, so expect other words, boatloads of media references, famous figures, and many, many long quotes!","\"this? state? this? hit the road dude this aint no state property this is private property\"",
+        "mona lisa","ratticus","blahaj","swedish meatballs","dragon","princess","luigi","almond joy","skittles","m and m's","right twix","left twix","coca cola","pepsi","three am videos","\"look again at that dot. that's here. that's home. that's us. on it everyone you love, everyone you know, everyone you every heard of, every human being who ever was, lived out their lives. the aggregate of joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there - on a mote of dust suspended in a sunbeam.\"",
+        ""];
 
 #hints for the hint feature:
 hints = ["casper the?",
@@ -121,7 +123,7 @@ hints = ["casper the?",
         "actually how tho",
         "a kind of zombie thing idk",
         "associated with evil and bad things",
-        "something that happens when you get to 99 score",
+        "something that happens when you get to 999 score",
         "something you don't want people looking through",
         "_ owls",
         "a time when you do not go mining",
@@ -136,7 +138,7 @@ hints = ["casper the?",
         "innocent farmer grape man was attacked in his house before being brutally murdered",
         "picture of a phone in the foreground and a man looking up at the camera in the background",
         "you should have gone for the head.",
-        "william shakespeare said thisprobably",
+        "william shakespeare said this probably",
         "a title of a radiohead song, referenced ",
         "a poem from 1923 by robert frost where the title is the final line. the line is also referenced in two young the giant songs,\'daydreamer\' and \'life is a long goodbye\'",
         "something you'd say if you made it all the way to 99 score",
@@ -153,7 +155,23 @@ hints = ["casper the?",
         "mega niche reference I dont't expect you to get this one",
         "(new lingo)",
         "instructions",
-        "a recorded interaction between a fisher and an elderly man in his truck that went viral on social media"]
+        "a recorded interaction between a fisher and an elderly man in his truck that went viral on social media",
+        "the most famous art piece to ever exist",
+        "your landlord",
+        "the ikea shark!",
+        "ikea food",
+        "popular fantasy beast",
+        "popular fantasy quest objective",
+        "mr. video game's greener brother",
+        "the greatest or worst candy to get on halloween, depending on who you ask",
+        "taste the rainbow",
+        "\"the wrapper? why would you want to eat the wrapper\"",
+        "subject of a failed marketing campaign",
+        "subject of a failed marketing campaign",
+        "the most popular fizzy drink, which used to be sold as a medicine",
+        "the rival of the most popular pop brand",
+        "a specific template of youtube video popularized around 2016",
+        "one of, in my opinion, carl sagan's bes quotes."]
 #alphabet for checking the letters
 alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 guessedLetters = [""]
@@ -218,8 +236,8 @@ def makeGuy(stage,s,h,hs,st,sts,fh,qh):
         hin="yes"
     else:
         hin="no"
-    print("\U0001F4CA  stats:\t\u2022 score: "+str(s)+"\t\U0001F494 hints used: "+str(hs)+"\t\u2B50 stars: "+str(st)+"\t  \U0001F320 star streak: "+str(sts))
-    print("\U0001F4B0  resources:\t\u2764\uFE0F   lives: "+str(stage)+"\t\U0001F56F free hints: "+str(fh)+"\t\U0001F50D quick hints:"+str(qh)+"\t\U0001F4A1 hint available: "+hin)
+    print("\U0001F4CA  stats:\t\u2022 score: "+str(s)+"\t\U0001F494 hints used: "+str(hs)+"\t\u2B50 stars: "+str(st)+"\t      \U0001F320 star streak: "+str(sts))
+    print("\U0001F4B0  resources:\t\u2764\uFE0F   lives: "+str(stage)+"\t\U0001F56F free hints: "+str(fh)+"   \t\U0001F50D quick hints:"+str(qh)+"      \U0001F4A1 hint available: "+hin)
     print("\n_____________");
     print("|       |");
     if stage == 7:
@@ -411,7 +429,10 @@ def playrounds():
             giveHint=False
 
             #make the guy to set up
-            makeGuy(lives,score,hintUsed and (lives<6),hintsUsed,stars,starStreak,freeHints,quickHints)
+            canHint=0
+            if quickHints>=1:
+                canHint=2
+            makeGuy(lives,score,hintUsed and (lives>6+canHint),hintsUsed,stars,starStreak,freeHints,quickHints)
             checkpointM(score,stars,starStreak)
             print(placeholder(word))
             print("\nletter and words already guessed:")
@@ -422,9 +443,6 @@ def playrounds():
             for i in guessedLetters:
                 if i == answer:
                     answerGuessedA = True
-            canHint=0
-            if quickHints>=1:
-                canHint=2
             if answer=="hint" and lives>0 and lives<6+canHint and hintsUsed<5:
                 hintask=input("\nsay the magic words and try again.\n")
                 if hintask=="hint":
@@ -487,7 +505,7 @@ def playrounds():
                 else:
                     lives-=1
             elif answer=="help":
-                print("Type a letter into the terminal and press enter to guess a letter, once you have all the letters or have a guess for the full word, type it in to guess! \n*****BE SURE TO INCLUDE ALL PUNCTUATIONS, SPACES, etc. NO UPPERCASE LETTERS!!*****\nAfter you have less than 6 lives, you are allowed to exchange a life for a hint by typing \"hint\"! Be careful though, as helpful as some hits can be, many hints are more obscure references and may seem unrelated if you don't catch the reference. \nThere is a mechanic called \"stars\" in this version, requiring you to guess the word without using more than 2 lives. This means you cannot get the star if you need a hint, as the hint will put you at 4 lives, making that round inelligible for the star. there is also a streak counter that counts your consecutive stars.\n there are secret messages at certain checkpoints, 5 score, 10 score, so on. there is also messages associated with stars and most importantly star streaks, which are more or less frequent, be careful and hit those goals!")
+                print("Type a letter into the terminal and press enter to guess a letter, once you have all the letters or have a guess for the full word, type it in to guess! \n*****BE SURE TO INCLUDE ALL PUNCTUATIONS, SPACES, etc. NO UPPERCASE LETTERS!!*****\nAfter you have less than 6 lives, you are allowed to exchange a life for a hint by typing \"hint\"! Be careful though, as helpful as some hits can be, many hints are more obscure references and may seem unrelated if you don't catch the reference. Along with hints there are two other related resources: free hints that allow you to use a hint without using a life, though you cannot use it before losing 2 lives a usual or without the other resource item, quick hints that allow you to use a hint before you have lost two lives. free hints are obtained when you are able to guess the word before losing 2 lives and you are given a quick hint every 5 rounds. \nThere is a mechanic called \"stars\" in this version, requiring you to guess the word without using more than 2 lives. This means you cannot get the star if you need a hint, as the hint will put you at 4 lives, making that round inelligible for the star. there is also a streak counter that counts your consecutive stars.\n there are secret messages at certain checkpoints, 5 score, 10 score, so on. there is also messages associated with stars and most importantly star streaks, which are more or less frequent, be careful and hit those goals!")
             elif len(answer)>1:
 
                 if answer == word:
