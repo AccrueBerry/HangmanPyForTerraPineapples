@@ -15,7 +15,7 @@ words = ["ghost","high score","poop","spongebob","patrick the star","gerard way"
 
 #hints for the hint feature:
 hints = ["casper the?",
-        "something that poeple reach for",
+        "something that poeple reach",
         "only 2 unique letters in form xyyx",
         "yellow guy from a hit kids show named after him",
         "yellow guy's companion in hit kids show named after yellow guy",
